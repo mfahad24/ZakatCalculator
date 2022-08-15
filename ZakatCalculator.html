@@ -1,0 +1,194 @@
+<p style="margin-bottom: 20px">
+  <em
+    ><span style="font-size: 12pt"
+      ><strong
+        >Your Zakat Amount Due is calculated at 2.5% of your total Zakatable
+        (Eligible for Zakat) amount only if your total Zakatable Amount is equal
+        to or above the nisab. If you have a nisab value from a different date
+        (<a
+          href="https://goldprice.org/gold-price-history.html"
+          target="_blank"
+          rel="noopener"
+          >click here for historical gold prices</a
+        >) or have your own nisab value from a different source, enter it on
+        line 2.<br /><br />
+        Should you have any questions about Zakat please contact the Assembly of
+        Muslim Jurists of America (<a
+          href="https://www.amjaonline.org/"
+          target="_blank"
+          rel="noopener"
+          >AMJA</a
+        >) ·&nbsp; Fatwa Hotline -
+        <a href="tel:9162396233">(916) 239–6233</a>.</strong
+      ></span
+    ></em
+  >
+</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table class="zakah-table">
+  <tbody>
+    <tr>
+      <td>
+        <i><strong>Current Nisab Value:</strong></i
+        ><br />
+        <i>Nisab value is price of gold per ounce x 3</i
+        ><strong
+          ><i
+            ><a
+              href="https://www.monex.com/gold-prices/"
+              target="_blank"
+              rel="noopener"
+            >
+              - click here for price of gold today</a
+            ></i
+          ></strong
+        >
+      </td>
+      <td>
+        <input
+          disabled="disabled"
+          type="text"
+          value="0"
+          class="value-field input-value--nisab"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><i>&nbsp;</i></p>
+      </td>
+      <td class="us-currency-symbol">
+        <input
+          pattern="[0-9]*"
+          type="text"
+          class="value-field input-value--userNisab"
+          onfocus="makeThisValueTheNisabValue()"
+          placeholder="0"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td class="indent">
+        <i>Cash on hand and in back accounts (savings, checking, etc):</i>
+      </td>
+      <td class="us-currency-symbol">
+        <input
+          pattern="[0-9]*"
+          type="text"
+          class="value-field input-value--user"
+          placeholder="0"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td class="indent">
+        <i>Non-delinquent loans (money you loaned to others):</i>
+      </td>
+      <td class="us-currency-symbol">
+        <input
+          pattern="[0-9]*"
+          type="text"
+          class="value-field input-value--user"
+          placeholder="0"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td class="indent"><i>Value of gold, silver and precious items:</i></td>
+      <td class="us-currency-symbol">
+        <input
+          pattern="[0-9]*"
+          type="text"
+          class="value-field input-value--user"
+          placeholder="0"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td class="indent"><i>Value of shares and stocks:</i></td>
+      <td class="us-currency-symbol">
+        <input
+          pattern="[0-9]*"
+          type="text"
+          class="value-field input-value--user"
+          placeholder="0"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td class="indent">
+        <i
+          >Net value of IRA, 401K, pension funds if liquidated as of the zakat
+          payment date (adjusted for taxes and penalties, if applicable):</i
+        >
+      </td>
+      <td class="us-currency-symbol">
+        <input
+          pattern="[0-9]*"
+          type="text"
+          class="value-field input-value--user"
+          placeholder="0"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td class="indent">
+        <i>Business cash on hand and in banks plus invoices due:</i>
+      </td>
+      <td class="us-currency-symbol">
+        <input
+          pattern="[0-9]*"
+          type="text"
+          class="value-field input-value--user"
+          placeholder="0"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td class="indent">
+        <i>Net value of business inventory and trade goods:</i>
+      </td>
+      <td class="us-currency-symbol">
+        <input
+          pattern="[0-9]*"
+          type="text"
+          class="value-field input-value--user"
+          placeholder="0"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td class="indent"><i>Equity in investment real estate:</i></td>
+      <td class="us-currency-symbol">
+        <input
+          pattern="[0-9]*"
+          type="text"
+          class="value-field input-value--user"
+          placeholder="0"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td class="eligible-for-zakah">
+        <strong>Total Zakatable (Eligible for Zakat) Amount:</strong>
+      </td>
+      <td><span class="eligible-for-zakah--number value-field"></span></td>
+    </tr>
+    <tr>
+      <td class="your-amount-due"><strong>Your Zakat Amount Due:</strong></td>
+      <td><span class="your-amount-due--number value-field"></span></td>
+    </tr>
+    <tr>
+      <td class="zakat-amount-disclosure">&nbsp;</td>
+      <td>
+        <button class="calculate-btn button-color" onclick="calculateHowMuchIsOwed()">
+          Calculate</button
+        ><button class="reset-btn button-color" onclick="resetAllInputFields()">
+          Reset
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<script type="text/javascript" src="ZakatCalculator.js"></script>
